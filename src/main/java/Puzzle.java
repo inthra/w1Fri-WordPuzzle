@@ -14,7 +14,7 @@ public class Puzzle {
     userString = userString.replace('I', '-');
     userString = userString.replace('O', '-');
     userString = userString.replace('U', '-');
-
+    
     return userString;
   }
 }
