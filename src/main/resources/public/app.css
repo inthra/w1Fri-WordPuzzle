@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  font-size: 55px;
+}
+#headerIndex {
+  background-color: #e6e6ff;
+  color: #663300;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 7px;
+  border-radius: 7px;
+}
+#headerGamePage {
+  background-color: #ffe6cc;
+  color: #cc3300;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 7px;
+  border-radius: 7px;
+}
+#dashWords {
+  text-align: center;
+  font-size: 40px;
+  color: #0099ff;
+  margin-top: 20px;
+}
+form {
+  margin-top: 30px;
+}
+button {
+  margin-left: 15px;
+}

@@ -1,12 +1,20 @@
-<h1>Word Puzzle</h1>
+<div id="headerIndex">
+  <h1>Initiate Word Puzzle</h1>
+</div>
 
 <h3>Enter word(s) or sentences in the box and we will change to word puzzle.</h3>
 
 <form action='/results' method='get'>
-  <div class="form-group col-sm-7">
-    <label for="userInput">Enter here</label>
-    <input id="userInput" name="userInput" class="form-control" type="text">
+  <div class="row">
+    <div class="form-group col-sm-6 col-sm-offset-1">
+      <label for="userInput">Any word or sentence</label>
+      <input id="userInput" name="userInput" class="form-control" type="text">
+    </div>
   </div>
-  <br>
-  <button type="submit" class="btn btn-primary">Go Puzzle</button>
+  <div class="row">
+    <div class="col-sm-offset-1">
+      <button type="submit" class="btn btn-success col-sm-2">Go Puzzle</button>
+    </div>
+  </div>
+
 </form>
