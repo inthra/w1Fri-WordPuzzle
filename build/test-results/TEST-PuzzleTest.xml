@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PuzzleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-04-22T15:43:13" hostname="epicodus-117.local" time="0.001">
+<testsuite name="PuzzleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-04-22T16:30:34" hostname="epicodus-117.local" time="0.002">
   <properties/>
-  <testcase name="runReplaceVowels_replaceVowelsWithDash_WordPuzzle" classname="PuzzleTest" time="0.001"/>
+  <testcase name="runReplaceVowels_replace_e_WithDash_returnWordPuzzle" classname="PuzzleTest" time="0.001"/>
+  <testcase name="runReplaceVowels_replaceUpperCaseVowelsWithDash_returnWordPuzzle" classname="PuzzleTest" time="0.0"/>
+  <testcase name="runReplaceVowels_replaceVowelsWithDash_returnWordPuzzle" classname="PuzzleTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
