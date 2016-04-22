@@ -26,7 +26,22 @@ public class App {
 
       model.put("results", results);
 
+      // click("#answer") {
+      //   model.put("results", inputString);
+      // }
+
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
 }
+    // get("/answer", (request, response) -> {
+    //   Map<String, Object> model = new HashMap<String, Object>();
+    //   model.put("template", "templates/answer.vtl");
+    //
+    //   String inputString = request.queryParams("userInput");
+    //   String answer = inputString;
+    //
+    //   model.put("answerSpot", answer);
+    //
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());

@@ -4,17 +4,20 @@
 public class Puzzle {
 
   public String replaceVowels(String userString) {
-    userString = userString.replace('a', '-');
-    userString = userString.replace('e', '-');
-    userString = userString.replace('i', '-');
-    userString = userString.replace('o', '-');
-    userString = userString.replace('u', '-');
-    userString = userString.replace('A', '-');
-    userString = userString.replace('E', '-');
-    userString = userString.replace('I', '-');
-    userString = userString.replace('O', '-');
-    userString = userString.replace('U', '-');
-    
+    char[] vowelArray = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+
+    for (char vowels : vowelArray) {
+      userString = userString.replace(vowels, '-');
+    }
+    return userString;
+  }
+
+  public String reveal_E(String userString) {
+    char[] vowelArray = {'a', 'i', 'o', 'u', 'A', 'I', 'O', 'U'};
+
+    for (char vowels : vowelArray) {
+      userString = userString.replace(vowels, '-');
+    }
     return userString;
   }
 }
