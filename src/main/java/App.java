@@ -12,36 +12,32 @@ public class App {
 
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
+      model.put("userInput", request.session().attribute("userInput"));
       model.put ("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/results", (request, response) -> {
+    post("/game", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/gamePage.vtl");
-
       String inputString = request.queryParams("userInput");
+      request.session().attribute("userInput", inputString);
+
       Puzzle myPuzzle = new Puzzle();
       String results = myPuzzle.replaceVowels(inputString);
-
       model.put("results", results);
-
-      // click("#answer") {
-      //   model.put("results", inputString);
-      // }
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    get("/answer", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/answer.vtl");
+
+      model.put("answerSpot", request.session().attribute("userInput"));
+
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
   }
 }
-    // get("/answer", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //   model.put("template", "templates/answer.vtl");
-    //
-    //   String inputString = request.queryParams("userInput");
-    //   String answer = inputString;
-    //
-    //   model.put("answerSpot", answer);
-    //
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
